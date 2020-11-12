@@ -23,11 +23,16 @@
                     <target>8</target>
                 </configuration>
             </plugin>
+
+            <!-- https://mvnrepository.com/maven-surefire/ -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
+            <!-- This helps us not to fail whole script. It runs all then shows the result -->
+                    <testFailureIgnore>true</testFailureIgnore>
+
                     <includes>
                         <include>**/CucumberRunner.java</include>
                     </includes>

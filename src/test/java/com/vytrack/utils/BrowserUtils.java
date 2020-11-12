@@ -34,7 +34,8 @@ public class BrowserUtils {
         wait.until(ExpectedConditions.visibilityOf(element));
         element.clear();
         element.sendKeys(text);
-        wait.until(ExpectedConditions.attributeToBe(element, "value", text));
+        //wait.until(ExpectedConditions.attributeToBe(element, "value", text));
+        BrowserUtils.wait(1);
         System.out.println("Entering text: " + text);
     }
 
@@ -53,5 +54,4 @@ public class BrowserUtils {
      * As we know, text is stored in the value attribute. So we need to wait until value attribute
      * of the element will obtain expected text.
      */
-
 }
