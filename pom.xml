@@ -23,20 +23,44 @@
                     <target>8</target>
                 </configuration>
             </plugin>
-
-            <!-- https://mvnrepository.com/maven-surefire/ -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-            <!-- This helps us not to fail whole script. It runs all then shows the result -->
                     <testFailureIgnore>true</testFailureIgnore>
-
+                    <!-- parallel testing -->
+                    <parallel>methods</parallel>
+                    <threadCount>2</threadCount>
+                    <forkCount>2C</forkCount>
+                    <perCoreThreadCount>false</perCoreThreadCount>
+                    <!-- parallel testing -->
                     <includes>
                         <include>**/CucumberRunner.java</include>
                     </includes>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>5.0.0</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>Cucumber HTML Reports</projectName>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <inputDirectory>${project.build.directory}</inputDirectory>
+                            <jsonFiles>
+                                <param>**/cucumber*.json</param>
+                            </jsonFiles>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
