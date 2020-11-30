@@ -1,8 +1,8 @@
 @login
 Feature: As user I want to be able to login under different roles
 # this is a comment
-#Background - test pre-condition
-#  will be executed before every scenario in the particular feature file
+# Background - test pre-condition
+# will be executed before every scenario in the particular feature file
   Background: common steps
     Given user is on the login page
 
@@ -45,11 +45,11 @@ Feature: As user I want to be able to login under different roles
       | store manager | Dashboard       |
       | driver        | Quick Launchpad |
 
-#    role - variable. You can name parameters as you want.
-#   1st row always reserved for parameters
+# role - variable. You can name parameters as you want.
+# 1st row always reserved for parameters
 # auto-formatting on mac:     command + option + L
 # auto-formatting on windows: control + alt + L
-#"driver" - is a parameter. "" allows to do test parametrization which helps to re-use test steps
+# "driver" - is a parameter. "" allows to do test parametrization which helps to re-use test steps
 
   @negative_login @smoke
   Scenario: Invalid password

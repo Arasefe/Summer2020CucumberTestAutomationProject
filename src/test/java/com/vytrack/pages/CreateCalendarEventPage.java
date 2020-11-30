@@ -33,10 +33,10 @@ public class CreateCalendarEventPage extends BasePage {
         Driver.getDriver().switchTo().defaultContent();
         //wait for frame and switch to it
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(0));
-        //enter text
-//        BrowserUtils.enterText(descriptionInputBox, text);
+        // enter text
+        // BrowserUtils.enterText(descriptionInputBox, text);
         descriptionInputBox.sendKeys(text);
-        //exit from the frame
+        // exit from the frame
         Driver.getDriver().switchTo().defaultContent();
     }
 
