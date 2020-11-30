@@ -29,14 +29,12 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
-                    <!-- parallel testing -->
-                    <parallel>methods</parallel>
+                    <parallel>classes</parallel>
                     <threadCount>2</threadCount>
                     <forkCount>2C</forkCount>
                     <perCoreThreadCount>false</perCoreThreadCount>
-                    <!-- parallel testing -->
                     <includes>
-                        <include>**/CucumberRunner.java</include>
+                        <include>**/CucumberRunner*.java</include>
                     </includes>
                 </configuration>
             </plugin>

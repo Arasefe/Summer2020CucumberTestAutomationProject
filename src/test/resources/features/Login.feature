@@ -10,7 +10,7 @@ Feature: As user I want to be able to login under different roles
   Scenario: Login as a sales manger
     When user logs in
     Then user should see dashboard page
-#
+
 #  @parametrized_test @smoke_test
 #  Scenario: Parametrized login
 #    When user logs in as a "store manager"
@@ -30,6 +30,8 @@ Feature: As user I want to be able to login under different roles
       | role          |
       | sales manager |
       | store manager |
+      | driver        |
+      | driver        |
       | driver        |
 
   @s_o @with_two_columns
