@@ -1,3 +1,5 @@
+
+@CreateCar
 Feature: As user, I want to be able to create new cars
 
   @add_car @smoke
