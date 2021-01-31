@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         },
         glue = "com/vytrack/step_definitions",
         dryRun = false,
-        tags = "@add_car",
+        tags = "@negative_login",
         publish = true
 )
 public class CucumberRunner {

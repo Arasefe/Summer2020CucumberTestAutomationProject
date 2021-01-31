@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         },
         glue = "com/vytrack/step_definitions",
         dryRun = false,
-        tags = "",
+        tags = "@negative_scenario_outline",
         publish = true
 )
 public class CucumberRunner2 {
