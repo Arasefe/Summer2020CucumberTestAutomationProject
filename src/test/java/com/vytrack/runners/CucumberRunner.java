@@ -12,12 +12,14 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json"
         },
         features = {
-                "src/test/resources/features/activities",
+                "src/test/resources/features",
         },
         glue = "com/vytrack/step_definitions",
         dryRun = false,
         tags = "@negative_login",
         publish = true
+        //monochrome = true
+
 )
 public class CucumberRunner {
     //tags = "@s_o and @with_two_columns",
