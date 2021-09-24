@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: As user, I want to be able to create new cars
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 148.073 s - in As user, I want to be able to create new cars

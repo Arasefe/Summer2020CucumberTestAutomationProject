@@ -4,6 +4,8 @@ package com.vytrack.runners;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -28,5 +30,6 @@ public class CucumberRunner {
 
     //tags = "@s_o or @with_two_columns",
     // scenario must have EITHER OR tags
-    //java logic if(@s_o || @with_two_columns),
+    //java logic if(@s_o ||
+    
 }
